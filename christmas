@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merry Christmas</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #001d3d, #004080);
+            overflow: hidden;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 20px 0;
+            text-shadow: 2px 2px 5px #ff0000;
+        }
+
+        .tree {
+            margin: 50px auto;
+            position: relative;
+            width: 0;
+            height: 0;
+        }
+
+        .tree:before,
+        .tree:after,
+        .tree div {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background: green;
+            border-radius: 5px;
+        }
+
+        .tree:before {
+            width: 200px;
+            height: 100px;
+            top: 0;
+        }
+
+        .tree:after {
+            width: 160px;
+            height: 100px;
+            top: 30px;
+        }
+
+        .tree div {
+            width: 120px;
+            height: 100px;
+            top: 60px;
+        }
+
+        .tree .star {
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            width: 30px;
+            height: 30px;
+            background: gold;
+            transform: translateX(-50%) rotate(45deg);
+            clip-path: polygon(50% 0, 61% 38%, 100% 38%, 69% 61%, 79% 100%, 50% 75%, 21% 100%, 31% 61%, 0 38%, 39% 38%);
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+        }
+
+        @keyframes snowfall {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
+        .snowflake {
+            width: 5px;
+            height: 5px;
+            animation: snowfall 10s linear infinite;
+        }
+
+        /* Random snowflake positions */
+        .snowflake:nth-child(odd) {
+            animation-duration: 8s;
+        }
+
+        .snowflake:nth-child(even) {
+            animation-duration: 12s;
+        }
+
+        /* Snowflake distribution */
+        .snowflake:nth-child(1) { left: 10%; }
+        .snowflake:nth-child(2) { left: 30%; }
+        .snowflake:nth-child(3) { left: 50%; }
+        .snowflake:nth-child(4) { left: 70%; }
+        .snowflake:nth-child(5) { left: 90%; }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: pink;
+            text-shadow: 1px 1px 3px #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Merry Christmas!</h1>
+    <div class="tree">
+        <div class="star"></div>
+        <div></div>
+    </div>
+    <!-- Snowflakes -->
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <!-- Footer -->
+    <div class="footer">Art by Misrah 😘😘😘❤️❤️❤️</div>
+</body>
+</html>
